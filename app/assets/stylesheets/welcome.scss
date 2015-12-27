@@ -1,0 +1,25 @@
+.sign-in-register-box {
+  @extend .center-block;
+  width: 30em;
+  background-color: #F0F0F0;
+  padding: 25px;
+  border-radius: 30px;
+}
+
+.sign-in-register-tabs {
+  @extend .nav-tabs;
+  @extend .nav;
+  li {
+    a {
+      border-radius: 20px 20px 0 0;
+    }
+  }
+}
+
+.sign-in-box, .register-box {
+  background-color: #fff;
+  .sign-in-register-header {
+    @extend .text-center;
+    font-size: 1.2em;
+  }
+}
