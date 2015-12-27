@@ -18,6 +18,9 @@
 
 .sign-in-box, .register-box {
   background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
   .sign-in-register-header {
     @extend .text-center;
     font-size: 1.2em;

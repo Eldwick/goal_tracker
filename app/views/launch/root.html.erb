@@ -1,2 +1,5 @@
 <div id="goal-tracker">
+  <%= react_component('SignInRegisterBox', 
+                      {:form => @form.to_json, :imgSrc => image_path("gundam.jpg")}, 
+                      {:prerender => true}) %>
 </div>
