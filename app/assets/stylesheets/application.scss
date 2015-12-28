@@ -14,14 +14,18 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import "global_mixins";
+ @import "colors";
+ @import 'sign-in-register';
+ @import 'dashboard';
 
- @import 'welcome';
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
 
  body {
+  font-family: 'Merriweather Sans', sans-serif;
   background-image: image-url("background.png");
   font-size: 16px;
- }
-
- #goal-tracker {
-  @extend .container;
  }

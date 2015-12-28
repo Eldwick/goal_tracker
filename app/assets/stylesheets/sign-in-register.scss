@@ -1,0 +1,60 @@
+.sign-in-registration-container {
+  @extend .container;
+  height: 100%;
+  min-height: 100%;
+}
+
+.sign-in-register-box {
+  @extend .center-block;
+  @include vertical-align();
+  width: 30em;
+  background-color: $light-main-color;
+  padding: 25px;
+  border-radius: 30px;
+  a {
+    color: $main-color;
+  }
+  h1 {
+    @extend .text-center;
+    color: $main-color;
+    font-family: 'Lobster Two', cursive;
+    font-size: 5em;
+  }
+}
+
+.sign-in-register-tabs {
+  @extend .nav-tabs;
+  @extend .nav;
+  li {
+    a {
+      border-radius: 20px 20px 0 0;
+    }
+  }
+}
+
+.sign-in-box, .register-box {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  padding: 15px;
+  .sign-in-register-header {
+    @extend .text-center;
+    font-size: 1.2em;
+  }
+  button {
+    @extend .btn;
+    @extend .form-control;
+    border-color: $secondary-color;
+    background-color:  $light-secondary-color;
+    color: $main-color;
+    font-weight: bold;
+  }
+}
+
+.sign-in-register-input {
+  @extend .form-group;
+  input {
+    @extend .form-control;
+  }
+}

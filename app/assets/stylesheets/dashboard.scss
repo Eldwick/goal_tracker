@@ -1,0 +1,39 @@
+.dashboard-container, .dashboard-sidebar, .dashboard-main {
+  height: 100%;
+  min-height: 100%;
+}
+.dashboard-container {
+  @extend .container;
+}
+
+.dashboard-box {
+  @extend .row;
+  height: 30em;
+  min-height: 30em;
+}
+
+.dashboard-sidebar {
+  @extend .col-md-2;
+  @extend .hidden-sm;
+  @extend .hidden-xs;
+  padding: 0;
+  background-color: $mid-main-color;
+}
+
+.dashboard-sidebar--row {
+  text-align: right;
+  padding: 0.5em;
+  color: #98CE68;
+  font-size: 1.3em;
+  &::after {
+    content: " > ";
+  }
+  &:hover {
+    background-color: $main-color;
+  }
+}
+
+.dashboard-main {
+  @extend .col-md-10;
+  background-color: $light-main-color;
+}

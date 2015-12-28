@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
+  devise_scope :user do
+    post 'users' => 'registrations#create'
+  end
+
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'launch#root'
+
+  get 'dashboard' => 'dashboard#index', as: :dashboard_path
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
