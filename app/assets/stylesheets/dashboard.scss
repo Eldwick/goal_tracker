@@ -23,17 +23,19 @@
 .dashboard-sidebar--row {
   text-align: right;
   padding: 0.5em;
-  color: #98CE68;
+  color: $light-background-color;
   font-size: 1.3em;
   &::after {
     content: " > ";
   }
   &:hover {
     background-color: $main-color;
+    cursor: pointer;
   }
 }
 
 .dashboard-main {
   @extend .col-md-10;
-  background-color: $light-main-color;
+  padding: 15px;
+  background-color: $light-background-color;
 }

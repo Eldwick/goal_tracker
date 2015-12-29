@@ -11,7 +11,10 @@ var SignInRegisterBox = React.createClass({
     var tab = this.state.isSignInTab === true ? <SignInBox form={this.props.form} /> : <RegisterBox form={this.props.form}/>;
     return (
       <div className="sign-in-register-box">
-        <h1>mrTrackr</h1>
+        <div className="sign-in-register-box--header">
+          <h1>mrTrackr</h1>
+          <p>your motivating goal journal</p>
+        </div>
         <SignInRegisterTabs handleTabSelection={this.handleTabSelection} isSignInTab={this.state.isSignInTab} />
         {tab}
       </div>

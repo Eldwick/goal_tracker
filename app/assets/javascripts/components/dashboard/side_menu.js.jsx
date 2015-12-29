@@ -4,7 +4,7 @@ var DashboardSideMenu = React.createClass({
           handleSideMenuSelection= this.props.handleSideMenuSelection;
 
     this.props.menuRows.forEach(function(menuRow) {
-      rows.push(<DashboardSideMenuRow row={menuRow} handleSideMenuSelection={handleSideMenuSelection} />);
+      rows.push(<DashboardSideMenuRow key={menuRow.name} row={menuRow} handleSideMenuSelection={handleSideMenuSelection} />);
     })
     return (
       <div className="dashboard-sidebar">{rows}</div>

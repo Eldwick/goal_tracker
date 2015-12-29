@@ -7,21 +7,32 @@
 .sign-in-register-box {
   @extend .center-block;
   @include vertical-align();
+  height: 30em;
   width: 30em;
-  background-color: $light-main-color;
+  max-height: 100%;
+  background-color: $light-background-color;
   padding: 25px;
   border-radius: 30px;
   a {
     color: $main-color;
   }
-  h1 {
-    @extend .text-center;
-    color: $main-color;
-    font-family: 'Lobster Two', cursive;
-    font-size: 5em;
-  }
 }
 
+.sign-in-register-box--header {
+  h1, p {
+    @extend .text-center;
+    color: $main-color;
+  }
+  h1 {
+    font-family: 'Lobster Two', cursive;
+    font-size: 5em;
+    margin-bottom: 2px; 
+  }
+  p {
+    font-style: italic;
+    margin-bottom: 6px; 
+  }
+}
 .sign-in-register-tabs {
   @extend .nav-tabs;
   @extend .nav;
@@ -45,10 +56,11 @@
   button {
     @extend .btn;
     @extend .form-control;
-    border-color: $secondary-color;
-    background-color:  $light-secondary-color;
-    color: $main-color;
+    border-color: $mid-main-color;
+    background-color: $light-main-color;
+    color: $light-background-color;
     font-weight: bold;
+    letter-spacing: 0.2em;
   }
 }
 
