@@ -3,7 +3,7 @@ var DashboardCategoryList = React.createClass({
     var rows = [];
     this.props.categories.forEach(function(category) {
       category.deleteCategory = this.props.deleteCategory;
-      category.handleRecurringTaskSubmit = this.props.handleRecurringTaskSubmit;
+      category.taskProps = this.props.taskProps;
       rows.push(<DashboardCategoryRow key={category.id} category={category} />);
     }.bind(this));
             

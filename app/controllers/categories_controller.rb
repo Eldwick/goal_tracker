@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
   def index
     categories = Category.includes(:recurring_tasks)
 
-    render json: categories.to_json(:include => :recurring_tasks)
+    render json: categories.to_json(:include => { :recurring_tasks => { :include => :tasks }})
   end
 
   def show

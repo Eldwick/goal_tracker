@@ -20,7 +20,7 @@ class RecurringTasksController < ApplicationController
 
     respond_to do |format|
       if @recurring_task.save
-        category.recurring_tasks << @recurring_tasks if category
+        category.recurring_tasks << @recurring_task if category
         format.html { redirect_to @recurring_task, notice: 'RecurringTask was successfully created.' }
         format.json { render json: @recurring_task}
       else

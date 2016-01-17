@@ -7,7 +7,7 @@ var DashboardCategoryRow = React.createClass({
           recurring_tasks= this.props.category.recurring_tasks;
     if (recurring_tasks && recurring_tasks.length > 0) {
       this.props.category.recurring_tasks.forEach(function(task) {
-        tasks.push(<RecurringTaskInCategory task={task} />);
+        tasks.push(<RecurringTaskInCategory task={task} deleteRecurringTask={this.props.category.taskProps.deleteRecurringTask} handleTaskSubmit={this.props.category.taskProps.handleTaskSubmit}/>);
       }.bind(this));
     } else {
       tasks.push(<RecurringTaskInCategory />)
@@ -19,7 +19,7 @@ var DashboardCategoryRow = React.createClass({
             {this.props.category.name}
           </div>
           <div className="category-in-list--recurring-form">
-            <RecurringTaskInCategoryForm categoryID={this.props.category.id} handleRecurringTaskSubmit={this.props.category.handleRecurringTaskSubmit}/>
+            <RecurringTaskInCategoryForm categoryID={this.props.category.id} handleRecurringTaskSubmit={this.props.category.taskProps.handleRecurringTaskSubmit}/>
           </div>
           <div className="category-in-list-recurring-tasks">
             {tasks}

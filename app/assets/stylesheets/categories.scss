@@ -1,6 +1,7 @@
 .dashboard-main--categories {
   @extend .container-fluid;
   padding: 0;
+  height: 100%;
 }
 
 .dashboard-main--categories-header {
@@ -26,17 +27,16 @@
 
 .dashboard-main--categories-list {
   @extend .container-fluid;
+  overflow: scroll;
+  height: auto;
 }
+
 .dashboard-main--categories-row {
   @extend .row;
   padding-top: 10px;
   padding-bottom: 10px;
   border: 2px $light-main-color solid;
   margin-bottom: 10px;
-}
-
-.category-in-list-recurring-task--header {
-  @extend .col-md-10;
 }
 
 .category-in-list {
@@ -50,12 +50,21 @@
   margin: 0;
 }
 
-.category-list-recurring-task {
+.category-in-list-recurring-task {
+  @extend .row;
+  @extend .container-fluid;
+  padding: 0;
+  margin: 10px 0; 
+}
+
+.category-in-list-recurring-task--left {
+  @extend .col-md-10;
   @extend .container-fluid;
 }
 
-.category-in-list-recurring-task {
+.category-in-list-recurring-task--header {
   @extend .row;
+  margin: 0;
 }
 
 .category-in-list-delete,.category-in-list-recurring-task--delete {
@@ -72,8 +81,8 @@
     @extend .input-group-btn;
     button {
       @extend .btn;
-      color: $main-color;
-      background-color: $tertiary-color;
+      color: $light-background-color;
+      background-color: $main-color;
     }
   }
   input {

@@ -35,6 +35,10 @@ var Dashboard = React.createClass({
     $.delete("/categories/"+category_id+".json")
       .then(this.getCategories);
   },
+  deleteRecurringTask: function(recurring_task_id) {
+    $.delete("/recurring_tasks/"+recurring_task_id+".json")
+      .then(this.getCategories);
+  },
   handleSideMenuSelection: function(row) {
     this.setState({activeRow: row});
   },
@@ -49,13 +53,21 @@ var Dashboard = React.createClass({
     $.post("/recurring_tasks.json", data)
       .then(this.getCategories);
   },
+  handleTaskSubmit: function(data) {
+    $.post("/tasks.json", data)
+      .then(this.getCategories);
+  },
   render: function() {
     var categoryProps = {
       form: this.props.form,
       handleCategorySubmit: this.handleCategorySubmit,
       deleteCategory: this.deleteCategory,
       categories: this.state.categories,
-      handleRecurringTaskSubmit: this.handleRecurringTaskSubmit
+      taskProps: {
+        deleteRecurringTask: this.deleteRecurringTask,
+        handleRecurringTaskSubmit: this.handleRecurringTaskSubmit,
+        handleTaskSubmit: this.handleTaskSubmit
+      }
     };
     return (
       <div className="dashboard-box">

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'dashboard' => 'dashboard#index', as: :dashboard_path
 
   resources :categories
+  resources :recurring_tasks
   resources :tasks
 
 end

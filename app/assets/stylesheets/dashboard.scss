@@ -8,14 +8,13 @@
 
 .dashboard-box {
   @extend .row;
-  height: 30em;
-  min-height: 30em;
+  height: 100%;
 }
 
 .dashboard-sidebar {
   @extend .col-md-2;
-  @extend .hidden-sm;
-  @extend .hidden-xs;
+  @extend .col-xs-3;
+  @extend .col-sm-3;
   padding: 0;
   background-color: $mid-main-color;
 }
@@ -36,6 +35,9 @@
 
 .dashboard-main {
   @extend .col-md-10;
+  @extend .col-xs-9;
+  @extend .col-sm-9;
+
   padding: 15px;
   background-color: $light-background-color;
 }
